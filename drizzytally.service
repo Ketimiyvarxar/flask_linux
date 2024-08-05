@@ -1,0 +1,15 @@
+[Unit]
+Description=Run Drizzy
+After=network.target
+
+[Service]
+User=ketevansimonishvili
+WorkingDirectory=/home/ketevansimonishvili/Desktop/fdock
+Environment=PATH=/home/ketevansimonishvili/Desktop/fdock/myenv/bin
+ExecStart=/home/ketevansimonishvili/Desktop/fdock/myenv/bin/python3 /home/ketevansimonishvili/Desktop/fdock/mypay.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+
