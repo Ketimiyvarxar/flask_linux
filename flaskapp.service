@@ -1,0 +1,15 @@
+[Unit]
+description=Very basic Flask Web application
+After=network.target
+
+[Service]
+User=ketevansimonishvili
+WorkingDirectory=/home/ketevansimonishvili/Desktop/fdock
+Environment=/home/ketevansimonishvili/Desktop/fdock/myenv/bin
+ExecStart=/home/ketevansimonishvili/Desktop/fdock/myenv/bin/python3 /home/ketevansimonishvili/Desktop/fdock/app.py
+Restart=Always
+
+[Install]
+WantedBy=multi-user.target
+
+~                                         
