@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<style>
+    body {
+        background-color: #d9eaf5;
+        font-family: 'Times New Roman', Times, serif, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .header {
+        
+        background-color:  #1676bd;
+        color: white;
+        padding: 1px;
+        text-align: center;
+    }
+    .logo {
+        width: 200px;
+        height: 200px;
+    }
+    .company-name {
+        font-size: 2em;
+        margin: 10px 0;
+    }
+    .search-box {
+        margin-top: 50px;
+        margin: 40px auto;
+        max-width: 300px;
+        text-align: center;
+    }
+    .search-box input[type="text"] {
+        width: 80%;
+        padding: 10px;
+        font-size: 1em;
+    }
+    .search-box input[type="submit"] {
+        padding: 10px 15px;
+        font-size: 1em;
+        background-color: #0e6dc7;
+        color: rgb(255, 255, 255);
+        border: none;
+        cursor: pointer;
+    }
+</style>
+
+{% endblock %}
+
+{% block body %}
+<div class="header">
+    <img src="static\logo.png" alt="Company Logo" class="logo">
+    <div class="company-name">Drizzytally</div>
+</div>
+<div class="search-box">
+    <form action="{{ url_for('submit') }}" method="post">
+        <input type="text" name="time" placeholder="Time...">
+        <input type="text" name="speed" placeholder="Speed...">
+        <input type="text" name="region" placeholder="Region...">
+        <input type="submit" value="Submit">
+    </form>
+</div>
+{% endblock %}
